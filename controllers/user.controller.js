@@ -56,7 +56,6 @@ const signupUser = catchAsync(async (req, res, next) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "None",
-    maxAge: 3600000,
   });
 
   return res.status(201).json({
@@ -90,7 +89,6 @@ const loginUser = catchAsync(async (req, res, next) => {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "None",
-    maxAge: 3600000,
   });
 
   res.status(200).json({
